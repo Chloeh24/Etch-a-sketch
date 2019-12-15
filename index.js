@@ -11,10 +11,27 @@ function makeRows(rows, cols) {
     }
 }
 
-makeRows(16, 16)
+makeRows(40, 40)
+
+
+// change color 
 
 var block = document.querySelectorAll('.grid-item')
 
-block.addEventListener('click', function() {
-    block.classList.add('colored')
-});
+for(var i=0; i < block.length; i++){
+    block[i].addEventListener('click', function(){
+        this.classList.add('colored');
+    })
+}
+
+//clear
+var clear = document.querySelector('button')
+
+clear.addEventListener('click', function() {
+    block.forEach(x, function() {
+        if(x.classList.contains('colored')){
+            x.classList.remove('colored')
+        }
+    })
+    
+})
