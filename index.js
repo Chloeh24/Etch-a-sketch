@@ -11,7 +11,7 @@ function makeRows(rows, cols) {
     }
 }
 
-makeRows(40, 40)
+makeRows(50, 50)
 
 
 // change color 
@@ -25,13 +25,16 @@ for(var i=0; i < block.length; i++){
 }
 
 //clear
-var clear = document.querySelector('button')
+var clear = document.querySelector('#clear')
 
-clear.addEventListener('click', function() {
-    block.forEach(x, function() {
-        if(x.classList.contains('colored')){
-            x.classList.remove('colored')
+clear.addEventListener('click', function(){
+    clearGrid()
+});
+
+function clearGrid() {
+    for (var i=0; i < block.length; i++){
+        if (block[i].classList.contains('colored')){
+         block[i].classList.remove('colored')
         }
-    })
-    
-})
+     }
+}
