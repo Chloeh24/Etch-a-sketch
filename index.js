@@ -19,7 +19,7 @@ makeRows(50, 50)
 var block = document.querySelectorAll('.grid-item')
 
 for(var i=0; i < block.length; i++){
-    block[i].addEventListener('click', function(){
+    block[i].addEventListener('mouseover', function(){
         this.classList.add('colored');
     })
 }
