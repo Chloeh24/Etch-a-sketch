@@ -1,6 +1,7 @@
 
 body {
     text-align: center;
+    background-image: url('https://as2.ftcdn.net/jpg/01/93/74/19/500_F_193741992_6MPHjs94CzpLcT4lcLhOQsOzh3jDwT8t.jpg') no-repeat cover;
 }
 
 .title {
@@ -42,9 +43,10 @@ button:active, button:focus {
 }
 
 
-button h3 {
-    font-size: 1.2rem;
+h3 {
+    font-size: 1.1rem;
     padding: 3px;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .board {

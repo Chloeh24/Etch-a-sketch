@@ -48,6 +48,7 @@ var colorButton = document.querySelector('#color')
 
 colorButton.addEventListener('click', function(){
     changeColor();
+    console.log(colorButton.innerHTML)
 })
 
 var randomColor = ['red', 'blue', 'yellow', 'green', 'purple', 'orange', 'pink','white']
@@ -60,6 +61,7 @@ function changeColor(){
         index++
     } else {
         index = 0
+        draw = randomColor[index]
     }
 }
 
