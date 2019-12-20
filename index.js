@@ -11,7 +11,7 @@ function makeRows(rows, cols) {
     }
 }
 
-makeRows(50, 50)
+makeRows(50, 50);
 
 //set grid size 
 var gridButton = document.querySelector('#size')
@@ -27,12 +27,21 @@ gridButton.addEventListener('click', function(){
 // change color 
 
 var block = document.querySelectorAll('.grid-item')
+var draw = 'rgb(80, 80, 80)';
 
 for(var i=0; i < block.length; i++){
     block[i].addEventListener('mouseover', function(){
-        this.classList.add('colored');
+        this.style.backgroundColor = draw;
     })
-}
+};
+
+//to black
+
+var blackButton = document.querySelector('#black')
+
+blackButton.addEventListener('click', function(){
+    draw = 'rgb(80, 80, 80)'
+})
 
 //random color
 var colorButton = document.querySelector('#color')
@@ -41,31 +50,27 @@ colorButton.addEventListener('click', function(){
     changeColor();
 })
 
-var randomColor = ['red', 'blue', 'yellow', 'green', 'purple', 'orange', 'dimgrey','black']
+var randomColor = ['red', 'blue', 'yellow', 'green', 'purple', 'orange', 'pink','white']
 var index = 0;
 
-function changeColor() {
+function changeColor(){ 
     if (index < randomColor.length) {
-    colored.style.backgroundColor = randomColor[index];
-    index++
+        draw = randomColor[index]
+        colorButton.innerHTML = randomColor[index]
+        index++
     } else {
-        colored.style.backgroundColor = rgb(60, 60, 60);
-        index = -1
+        index = 0
     }
-
 }
+
+
 
 //clear
 var clear = document.querySelector('#clear')
 
 clear.addEventListener('click', function(){
-    clearGrid()
-});
-
-function clearGrid() {
+    
     for (var i=0; i < block.length; i++){
-        if (block[i].classList.contains('colored')){
-         block[i].classList.remove('colored')
+        block[i].style.backgroundColor = 'rgb(204, 204, 204)'
         }
-     }
-}
+     });
