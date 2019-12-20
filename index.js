@@ -13,6 +13,16 @@ function makeRows(rows, cols) {
 
 makeRows(50, 50)
 
+//set grid size 
+var gridButton = document.querySelector('#size')
+
+gridButton.addEventListener('click', function(){
+    var newGrid = Number(window.prompt('Enter grid size:', ''));
+    
+    makeRows(newGrid, newGrid)
+    
+});
+
 
 // change color 
 
@@ -22,6 +32,27 @@ for(var i=0; i < block.length; i++){
     block[i].addEventListener('mouseover', function(){
         this.classList.add('colored');
     })
+}
+
+//random color
+var colorButton = document.querySelector('#color')
+
+colorButton.addEventListener('click', function(){
+    changeColor();
+})
+
+var randomColor = ['red', 'blue', 'yellow', 'green', 'purple', 'orange', 'dimgrey','black']
+var index = 0;
+
+function changeColor() {
+    if (index < randomColor.length) {
+    colored.style.backgroundColor = randomColor[index];
+    index++
+    } else {
+        colored.style.backgroundColor = rgb(60, 60, 60);
+        index = -1
+    }
+
 }
 
 //clear

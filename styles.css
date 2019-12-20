@@ -28,23 +28,35 @@ button {
     height: 110px;
     width: 110px;
     border-radius: 50%;
-    background-color: rgb(204, 204, 204);
-    border: 4px outset rgb(175, 172, 172);
-
+    background-color: rgb(226, 226, 226);
+    border: 3px outset rgb(141, 139, 139);
 }
 
-button:active {
-    box-shadow: 3px 4px rgb(110, 109, 109);
+button:active, button:focus {
+    box-shadow: 2px 2px rgb(78, 76, 76);
     top: 3px;
-    outline: none;
+    outline-style: none;
 }
 
 button#clear {
-    left: 17%;
+    left: 18%;
+}
+
+button#size {
+    left: 28%;
 }
 
 button#color {
     right: 16%;
+}
+
+button#black {
+    right: 27%;
+}
+
+button h3 {
+    font-size: 1.2rem;
+    padding: 3px;
 }
 
 .board {
