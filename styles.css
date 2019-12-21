@@ -22,7 +22,7 @@ h1 {
 .buttons {
     position: relative;
     z-index: 3;
-    margin: 2% 15%;
+    margin: 1% 15%;
     padding-left: 2%;
     display: flex;
     justify-content: space-around;
@@ -39,9 +39,9 @@ button {
     font-family: 'Roboto Mono', monospace;
 }
 
-button:active, button:focus {
+button:active {
     box-shadow: 2px 2px rgb(78, 76, 76);
-    top: 3px;
+    margin-top: 3px;
     outline-style: none;
 }
 
