@@ -34,6 +34,9 @@ button {
     border-radius: 50%;
     background-color: rgb(226, 226, 226);
     border: 3px outset rgb(141, 139, 139);
+    font-size: 1.1rem;
+    padding: 3px;
+    font-family: 'Roboto Mono', monospace;
 }
 
 button:active, button:focus {
@@ -42,12 +45,6 @@ button:active, button:focus {
     outline-style: none;
 }
 
-
-h3 {
-    font-size: 1.1rem;
-    padding: 3px;
-    font-family: 'Roboto Mono', monospace;
-}
 
 .board {
     background-color: rgb(209, 29, 29); 

@@ -51,7 +51,7 @@ colorButton.addEventListener('click', function(){
     console.log(colorButton.innerHTML)
 })
 
-var randomColor = ['red', 'blue', 'yellow', 'green', 'purple', 'orange', 'pink','white']
+var randomColor = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', 'Pink','White']
 var index = 0;
 
 function changeColor(){ 
